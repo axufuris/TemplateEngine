@@ -1,0 +1,81 @@
+﻿{
+  "DefaultDirectory": "F:\\Tests\\Core",
+  "ProjectTypes": [
+    {
+      "DisplayName": "Full .NET",
+      "Projects": [
+        {
+          "GUID": "3bf901ba-a5e8-4bcf-ae0f-9af70291b498",
+          "GUIDTwo": "35f48be7-b3bf-49c7-9ff7-614b7af4bdaa",
+          "Name": "ClassLibraryNet",
+          "FinalName": "ClassLibrary",
+          "Directory": "Templates.ClassLibraryNet\\Templates.ClassLibraryNet.csproj",
+          "FolderName":  "ClassLibraryNet"
+        },
+        {
+          "GUID": "3bf901ba-a5e8-4bcf-ae0f-9af70291b498",
+          "GUIDTwo": "99eafc22-28b4-461d-9722-ddb12229b8a4",
+          "Name": "MVC6Net",
+          "FinalName": "Templates",
+          "Directory": "Templates.MVC6Net\\Templates.MVC6Net.csproj",
+          "FolderName": "MVC6Net"
+        },
+        {
+          "GUID": "3bf901ba-a5e8-4bcf-ae0f-9af70291b498",
+          "GUIDTwo": "9957c92b-2e53-4e0b-a9c3-636a26ab3298",
+          "Name": "TestNet",
+          "FinalName": "Test",
+          "Directory": "Templates.TestNet\\Templates.TestNet.csproj",
+          "FolderName": "TestNet"
+        },
+        {
+          "GUID": "3bf901ba-a5e8-4bcf-ae0f-9af70291b498",
+          "GUIDTwo": "eee31c2e-7851-4381-9dae-aeef18cd101b",
+          "Name": "WebAPI2",
+          "FinalName": "WebAPI",
+          "Directory": "Templates.WebAPI2\\Templates.WebAPI2.csproj",
+          "FolderName": "WebAPI2"
+        }
+      ],
+      "UsableName": "Full.NET"
+    },
+    {
+      "DisplayName": "Core",
+      "Projects": [
+        {
+          "GUID": "4ea3bfb7-507a-49bb-b753-984468676a58",
+          "GUIDTwo": "f0414da4-cd7b-4706-8906-7ebb7fb73904",
+          "Name": "ClassLibraryCore",
+          "FinalName": "ClassLibrary",
+          "Directory": "Templates.ClassLibraryCore\\Templates.ClassLibraryCore.csproj",
+          "FolderName": "ClassLibraryCore"
+        },
+        {
+          "GUID": "4ea3bfb7-507a-49bb-b753-984468676a58",
+          "GUIDTwo": "310a091b-6512-4bb7-85f8-6fa936f3fdb6",
+          "Name": "MVC6Core",
+          "FinalName": "Templates",
+          "Directory": "Templates.MVC6Core\\Templates.MVC6Core.csproj",
+          "FolderName": "MVC6Core"
+        },
+        {
+          "GUID": "4ea3bfb7-507a-49bb-b753-984468676a58",
+          "GUIDTwo": "f7b3686e-430f-490e-a7ca-7e4bfd47d71a",
+          "Name": "TestCore",
+          "FinalName": "Test",
+          "Directory": "Templates.TestCore\\Templates.TestCore.csproj",
+          "FolderName": "TestCore"
+        },
+        {
+          "GUID": "4ea3bfb7-507a-49bb-b753-984468676a58",
+          "GUIDTwo": "8dc7b5f5-6504-4314-ba74-c01aada91ce9",
+          "Name": "WebAPICore2",
+          "FinalName": "WebAPI",
+          "Directory": "Templates.WebAPICore2\\Templates.WebAPICore2.csproj",
+          "FolderName": "WebAPICore2"
+        }
+      ],
+      "UsableName": "Core"
+    }
+  ]
+}
