@@ -74,6 +74,12 @@
     <Compile Include="AddItem.Designer.cs">
       <DependentUpon>AddItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddKeyword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddKeyword.Designer.cs">
+      <DependentUpon>AddKeyword.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddProjectType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,7 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Managers\SettingsManager.cs" />
+    <Compile Include="Models\Keywords.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\ProjectType.cs" />
     <Compile Include="Models\Settings.cs" />
@@ -106,6 +113,9 @@
     </Compile>
     <EmbeddedResource Include="AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddKeyword.resx">
+      <DependentUpon>AddKeyword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddProjectType.resx">
       <DependentUpon>AddProjectType.cs</DependentUpon>

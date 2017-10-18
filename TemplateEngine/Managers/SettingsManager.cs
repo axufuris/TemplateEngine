@@ -28,7 +28,7 @@ namespace TemplateEngine.Managers
         {
             if (File.Exists("Settings.json"))
             {
-                File.Move("Settings.json", "Settings-" + DateTime.Now.ToString() + ".json");
+                File.Move("Settings.json", "Settings-" + DateTime.Now.ToString("MM-dd-yyyy-hh-mm-ss") + ".json");
 
                 File.WriteAllText("Settings.json", JsonConvert.SerializeObject(settings));
             }
@@ -46,6 +46,15 @@ namespace TemplateEngine.Managers
 
                 SaveSettings(settings);
             }
+        }
+
+        public static void AddKeyword(Keywords keyword)
+        {
+            var settings = GetSettings();
+
+            settings.Keywords.Add(keyword);
+
+            SaveSettings(settings);
         }
 
         public static void AddProjectType(string projectTypeName)
@@ -74,6 +83,24 @@ namespace TemplateEngine.Managers
                         z.Directory == selected.SubItems[3].Text).FirstOrDefault();
 
                 projectType.Projects.Remove(item);
+
+                SaveSettings(settings);
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool DeleteKeyword(ListViewItem selected)
+        {
+            var settings = GetSettings();
+
+            if (selected != null)
+            {
+                var keyword = settings.Keywords.Where(n => n.KeywordDisplay == selected.SubItems[0].Text).FirstOrDefault();
+
+                settings.Keywords.Remove(keyword);
 
                 SaveSettings(settings);
 

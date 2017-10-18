@@ -10,6 +10,8 @@ namespace TemplateEngine.Models
     {
         public string DefaultDirectory { get; set; }
 
+        public List<Keywords> Keywords { get; set; }
+
         public List<ProjectType> ProjectTypes { get; set; }
     }  // End of Class
 }

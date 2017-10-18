@@ -37,6 +37,11 @@
             this.ButtonCancel = new System.Windows.Forms.Button();
             this.ButtonDeleteItem = new System.Windows.Forms.Button();
             this.ButtonAddItem = new System.Windows.Forms.Button();
+            this.ButtonAddKeyword = new System.Windows.Forms.Button();
+            this.ButtonDeleteKeyword = new System.Windows.Forms.Button();
+            this.ListViewKeywords = new System.Windows.Forms.ListView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ButtonFolderCreate
@@ -71,7 +76,7 @@
             this.ListViewProjectTypes.Location = new System.Drawing.Point(27, 133);
             this.ListViewProjectTypes.MultiSelect = false;
             this.ListViewProjectTypes.Name = "ListViewProjectTypes";
-            this.ListViewProjectTypes.Size = new System.Drawing.Size(941, 446);
+            this.ListViewProjectTypes.Size = new System.Drawing.Size(941, 256);
             this.ListViewProjectTypes.TabIndex = 10;
             this.ListViewProjectTypes.UseCompatibleStateImageBehavior = false;
             this.ListViewProjectTypes.View = System.Windows.Forms.View.Details;
@@ -89,7 +94,7 @@
             // ButtonCancel
             // 
             this.ButtonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.ButtonCancel.Location = new System.Drawing.Point(893, 602);
+            this.ButtonCancel.Location = new System.Drawing.Point(892, 697);
             this.ButtonCancel.Name = "ButtonCancel";
             this.ButtonCancel.Size = new System.Drawing.Size(75, 23);
             this.ButtonCancel.TabIndex = 12;
@@ -117,13 +122,67 @@
             this.ButtonAddItem.UseVisualStyleBackColor = true;
             this.ButtonAddItem.Click += new System.EventHandler(this.ButtonAddItem_Click);
             // 
+            // ButtonAddKeyword
+            // 
+            this.ButtonAddKeyword.Location = new System.Drawing.Point(893, 402);
+            this.ButtonAddKeyword.Name = "ButtonAddKeyword";
+            this.ButtonAddKeyword.Size = new System.Drawing.Size(75, 23);
+            this.ButtonAddKeyword.TabIndex = 17;
+            this.ButtonAddKeyword.Text = "Add Item";
+            this.ButtonAddKeyword.UseVisualStyleBackColor = true;
+            this.ButtonAddKeyword.Click += new System.EventHandler(this.ButtonAddKeyword_Click);
+            // 
+            // ButtonDeleteKeyword
+            // 
+            this.ButtonDeleteKeyword.Location = new System.Drawing.Point(27, 402);
+            this.ButtonDeleteKeyword.Name = "ButtonDeleteKeyword";
+            this.ButtonDeleteKeyword.Size = new System.Drawing.Size(75, 23);
+            this.ButtonDeleteKeyword.TabIndex = 16;
+            this.ButtonDeleteKeyword.Text = "Delete Item";
+            this.ButtonDeleteKeyword.UseVisualStyleBackColor = true;
+            this.ButtonDeleteKeyword.Click += new System.EventHandler(this.ButtonDeleteKeyword_Click);
+            // 
+            // ListViewKeywords
+            // 
+            this.ListViewKeywords.FullRowSelect = true;
+            this.ListViewKeywords.Location = new System.Drawing.Point(26, 435);
+            this.ListViewKeywords.MultiSelect = false;
+            this.ListViewKeywords.Name = "ListViewKeywords";
+            this.ListViewKeywords.Size = new System.Drawing.Size(941, 256);
+            this.ListViewKeywords.TabIndex = 15;
+            this.ListViewKeywords.UseCompatibleStateImageBehavior = false;
+            this.ListViewKeywords.View = System.Windows.Forms.View.Details;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(406, 412);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Keywords";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(406, 109);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Projects";
+            // 
             // Settings
             // 
             this.AcceptButton = this.ButtonSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.ButtonCancel;
-            this.ClientSize = new System.Drawing.Size(986, 645);
+            this.ClientSize = new System.Drawing.Size(979, 732);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ButtonAddKeyword);
+            this.Controls.Add(this.ButtonDeleteKeyword);
+            this.Controls.Add(this.ListViewKeywords);
             this.Controls.Add(this.ButtonAddItem);
             this.Controls.Add(this.ButtonDeleteItem);
             this.Controls.Add(this.ButtonCancel);
@@ -155,5 +214,10 @@
         private System.Windows.Forms.Button ButtonCancel;
         private System.Windows.Forms.Button ButtonDeleteItem;
         private System.Windows.Forms.Button ButtonAddItem;
+        private System.Windows.Forms.Button ButtonAddKeyword;
+        private System.Windows.Forms.Button ButtonDeleteKeyword;
+        private System.Windows.Forms.ListView ListViewKeywords;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }

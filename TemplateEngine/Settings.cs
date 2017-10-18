@@ -15,6 +15,11 @@ namespace TemplateEngine
 
         private void Settings_Load(object sender, EventArgs e)
         {
+            LoadSettings();
+        }
+
+        private void LoadSettings()
+        {
             settings = SettingsManager.GetSettings();
 
             if (settings != null)
@@ -25,6 +30,8 @@ namespace TemplateEngine
                 ListViewProjectTypes.Columns.Add("Directory");
                 ListViewProjectTypes.Columns.Add("Solution GUID");
                 ListViewProjectTypes.Columns.Add("GUID Two");
+
+                ListViewKeywords.Columns.Add("Keyword");
 
                 TextboxCreateDirectory.Text = settings.DefaultDirectory;
 
@@ -41,6 +48,13 @@ namespace TemplateEngine
 
                         ListViewProjectTypes.Items.Add(item);
                     }
+                }
+
+                foreach (var keyword in settings.Keywords)
+                {
+                    var item = new ListViewItem(keyword.KeywordDisplay);
+
+                    ListViewKeywords.Items.Add(item);
                 }
             }
         }
@@ -84,6 +98,7 @@ namespace TemplateEngine
 
             Hide();
             select.ShowDialog();
+            LoadSettings();
             Show();
         }
 
@@ -92,6 +107,23 @@ namespace TemplateEngine
             var selected = ListViewProjectTypes.SelectedItems[0];
 
             SettingsManager.DeleteValue(selected);
+        }
+
+        private void ButtonAddKeyword_Click(object sender, EventArgs e)
+        {
+            var select = new AddKeyword();
+
+            Hide();
+            select.ShowDialog();
+            LoadSettings();
+            Show();
+        }
+
+        private void ButtonDeleteKeyword_Click(object sender, EventArgs e)
+        {
+            var selected = ListViewKeywords.SelectedItems[0];
+
+            SettingsManager.DeleteKeyword(selected);
         }
     }  // End of Class
 }

@@ -1,5 +1,11 @@
 ﻿{
   "DefaultDirectory": "F:\\Tests\\Core",
+  "Keywords": [
+    {
+      "Before": "Templates",
+      "After": "Testing"
+    }
+  ],
   "ProjectTypes": [
     {
       "DisplayName": "Full .NET",
