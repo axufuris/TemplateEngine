@@ -2,8 +2,8 @@
   "DefaultDirectory": "F:\\Tests\\Core",
   "Keywords": [
     {
-      "Before": "Templates",
-      "After": "Testing"
+      "Before": "..\\\\..\\\\..\\\\..\\\\packages",
+      "After": "..\\\\packages"
     }
   ],
   "ProjectTypes": [
@@ -16,7 +16,7 @@
           "Name": "ClassLibraryNet",
           "FinalName": "ClassLibrary",
           "Directory": "Templates.ClassLibraryNet\\Templates.ClassLibraryNet.csproj",
-          "FolderName":  "ClassLibraryNet"
+          "FolderName": "ClassLibraryNet"
         },
         {
           "GUID": "3bf901ba-a5e8-4bcf-ae0f-9af70291b498",

@@ -22,6 +22,9 @@ namespace TemplateEngine
         {
             settings = SettingsManager.GetSettings();
 
+            ListViewProjectTypes.Items.Clear();
+            ListViewKeywords.Items.Clear();
+
             if (settings != null)
             {
                 ListViewProjectTypes.Columns.Add("Project Type");
@@ -124,6 +127,7 @@ namespace TemplateEngine
             var selected = ListViewKeywords.SelectedItems[0];
 
             SettingsManager.DeleteKeyword(selected);
+            LoadSettings();
         }
     }  // End of Class
 }

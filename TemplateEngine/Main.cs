@@ -68,6 +68,7 @@ namespace TemplateEngine
 
         private void FormCreateProject_Load(object sender, EventArgs e)
         {
+            var settings = SettingsManager.GetSettings();
             projects = new List<Project>();
             solutionGUID = Guid.NewGuid().ToString();
             solutionProjectGUID = Guid.NewGuid().ToString();
@@ -78,6 +79,13 @@ namespace TemplateEngine
                 ComboboxProject.SelectedItem = ComboboxProject.Items[0];
 
                 DisplayProjects(null);
+            }
+
+            if (settings != null)
+            {
+                FileDialogSolution.InitialDirectory = settings.DefaultDirectory;
+                FolderBrowserCreate.SelectedPath = settings.DefaultDirectory;
+                TextboxCreateDirectory.Text = settings.DefaultDirectory;
             }
 
             //CreateSettings();
@@ -498,7 +506,15 @@ namespace TemplateEngine
 
             text = text.Replace("Templates.Templates", TextboxNamespace.Text);
             text = text.Replace("Templates", TextboxNamespace.Text);
-            text = text.Replace("..\\..\\..\\..\\packages", "..\\packages");
+            text = text.Replace("Application name", TextboxNamespace.Text);
+
+            var settings = SettingsManager.GetSettings();
+
+            foreach (var keyword in settings.Keywords)
+            {
+                //text = text.Replace("..\\..\\..\\..\\packages", "..\\packages");
+                text = text.Replace(keyword.Before, keyword.After);
+            }
 
             return text;
         }
@@ -566,6 +582,14 @@ namespace TemplateEngine
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ButtonBrowseSolution_Click(object sender, EventArgs e)
+        {
+            if (FileDialogSolution.ShowDialog() == DialogResult.OK)
+            {
+                TextBoxSolution.Text = FileDialogSolution.FileName;
+            }
         }
     }  // End of Class
 }
